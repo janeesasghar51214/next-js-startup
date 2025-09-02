@@ -1,0 +1,201 @@
+/* ===== Chatbot Container ===== */
+.chatbot-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 250px;
+  background: #ffffff;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #444;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.sidebar li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #f1f1f1;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebar li:hover {
+  background: #e0e0e0;
+}
+
+.sidebar li.active {
+  background: #007bff;
+  color: #fff;
+}
+
+/* Sidebar Buttons */
+.sidebar button {
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  background: #007bff;
+  color: white;
+  transition: 0.3s;
+}
+
+.sidebar button:hover {
+  background: #0056b3;
+}
+
+/* ===== Chat Window ===== */
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fdfdfd;
+}
+
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+/* User message */
+.message.user {
+  background: #007bff;
+  color: #fff;
+  align-self: flex-end;
+}
+
+/* Bot message */
+.message.bot {
+  background: #e5e5e5;
+  align-self: flex-start;
+}
+
+/* Typing indicator */
+.typing {
+  font-style: italic;
+  color: gray;
+  margin: 10px 0;
+}
+
+/* ===== Input Area ===== */
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+}
+
+.input-area input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  outline: none;
+}
+
+.input-area button {
+  padding: 10px 12px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  background: #007bff;
+  color: white;
+  transition: 0.3s;
+}
+
+.input-area button:hover {
+  background: #0056b3;
+}
+
+.input-area input[type="file"] {
+  display: none;
+}
+
+/* 🎤 Voice Button Style */
+.input-area button:last-of-type {
+  background: #28a745;
+}
+
+.input-area button:last-of-type:hover {
+  background: #1e7e34;
+}
+
+/* ===== Dark Mode ===== */
+.chatbot-container.dark {
+  background: #1e1e1e;
+  color: #f5f5f5;
+}
+
+.chatbot-container.dark .sidebar {
+  background: #2a2a2a;
+  border-right: 1px solid #444;
+}
+
+.chatbot-container.dark .sidebar li {
+  background: #333;
+  color: #ccc;
+}
+
+.chatbot-container.dark .sidebar li.active {
+  background: #007bff;
+  color: #fff;
+}
+
+.chatbot-container.dark .chat-window {
+  background: #1e1e1e;
+}
+
+.chatbot-container.dark .message.bot {
+  background: #444;
+  color: #fff;
+}
+
+.chatbot-container.dark .message.user {
+  background: #007bff;
+  color: #fff;
+}
+
+.chatbot-container.dark .input-area {
+  background: #2a2a2a;
+  border-top: 1px solid #444;
+}
+
+.chatbot-container.dark .input-area input[type="text"] {
+  background: #333;
+  border: 1px solid #555;
+  color: #fff;
+}
